@@ -1,6 +1,7 @@
 * {
     font-size: 18px;
     font-family: 'Outfit', sans-serif;
+    font-weight: 300;
 }
 
 :root {
@@ -10,10 +11,85 @@
     --card-dark-blue: hsl(216, 50%, 16%);
     --line-dark-blue: hsl(215, 32%, 27%);
     --white: hsl(0, 0%, 100%);
-    
 }
 
 body {
     background-color: var(--main-dark-blue);
 }
 
+.container {
+    width: 300px;
+    padding: 25px;
+    border-radius: 20px;
+    margin: auto;
+    background-color: var(--card-dark-blue);
+    position: relative;
+}
+
+.child {
+    width: 300px;
+    margin: auto;
+}
+
+.name, span {
+    color: var(--white);
+}
+
+.desc, .time, .creator {
+    color: var(--soft-blue);
+}
+
+.main-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.attribution {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--line-dark-blue);
+}
+
+.name {
+    font-weight: 600;
+    font-size: 22px;
+    padding-top: 10px;
+}
+
+.desc {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.eth {
+    color: var(--cyan);
+    font-weight: 400;
+}
+
+.eth-logo, .clock-img{
+    padding-right: 8px;
+}
+
+.avatar {
+    padding-right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.name:hover, span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.main-img:hover {
+    flood-color: var(--cyan);
+    cursor: pointer;
+}
