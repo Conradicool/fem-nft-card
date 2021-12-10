@@ -31,6 +31,10 @@ body {
     margin: auto;
 }
 
+.inline-info {
+    display: inline;
+}
+
 .name, span {
     color: var(--white);
 }
@@ -39,6 +43,8 @@ body {
     color: var(--soft-blue);
 }
 
+
+
 .main-img {
     width: 300px;
     height: 300px;
@@ -46,6 +52,22 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.eye-cont {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: var(--cyan);
+}
+
+.eye-cont:hover {
+    opacity: 1;
 }
 
 .attribution {
@@ -62,9 +84,13 @@ body {
     padding-top: 10px;
 }
 
-.desc {
+/* .desc {
     display: inline-block;
     vertical-align: top;
+} */
+
+.etherium {
+    float: left;
 }
 
 .eth {
@@ -72,8 +98,17 @@ body {
     font-weight: 400;
 }
 
+.time-left {
+    float: right;
+}
+
 .eth-logo, .clock-img{
     padding-right: 8px;
+}
+
+.creator-tag {
+    display: inline;
+    
 }
 
 .avatar {
@@ -82,6 +117,7 @@ body {
     height: 30px;
     border: 1px solid var(--white);
     border-radius: 50%;
+    vertical-align: bottom;
 }
 
 .name:hover, span:hover {
