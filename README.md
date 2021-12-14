@@ -30,7 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GutHub Repository](https://github.com/Conradicool/fem-nft-card)
+- Solution URL: [GitHub Repository](https://github.com/Conradicool/fem-nft-card)
+- Live Server: [GitHub Pages](https://conradicool.github.io/fem-nft-card/)
 
 ## My process
 
