@@ -24,6 +24,8 @@ body {
     margin: auto;
     background-color: var(--card-dark-blue);
     position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .child {
@@ -31,8 +33,55 @@ body {
     margin: auto;
 }
 
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.eye-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    opacity: 0;
+    transition: .4s ease;
+    background-color: hsl(178, 100%, 50%, 50%);
+}
+
+.eye-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-container:hover .eye-cont {
+    opacity: 1;
+    cursor: pointer;
+}
+
 .inline-info {
-    display: inline;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line-dark-blue);
+    font-weight: 400;
+}
+
+.inline-info p {
+    display: flex;
+    align-items: center;
 }
 
 .name, span {
@@ -43,31 +92,42 @@ body {
     color: var(--soft-blue);
 }
 
-
-
-.main-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 8px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.name {
+    font-weight: 600;
+    font-size: 22px;
+    padding-top: 10px;
 }
 
-.eye-cont {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: var(--cyan);
+.eth {
+    color: var(--cyan);
+    font-weight: 400;
 }
 
-.eye-cont:hover {
-    opacity: 1;
+.eth-logo, .clock-img{
+    padding-right: 4px;
+}
+
+.creator-tag {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    vertical-align: bottom;
+}
+
+.creator {
+    padding-left: 15px;
+    font-weight: 400;
+}
+
+.name:hover, span:hover {
+    color: var(--cyan);
+    cursor: pointer;
 }
 
 .attribution {
@@ -76,56 +136,4 @@ body {
     bottom: 0;
     width: 100%;
     background-color: var(--line-dark-blue);
-}
-
-.name {
-    font-weight: 600;
-    font-size: 22px;
-    padding-top: 10px;
-}
-
-/* .desc {
-    display: inline-block;
-    vertical-align: top;
-} */
-
-.etherium {
-    float: left;
-}
-
-.eth {
-    color: var(--cyan);
-    font-weight: 400;
-}
-
-.time-left {
-    float: right;
-}
-
-.eth-logo, .clock-img{
-    padding-right: 8px;
-}
-
-.creator-tag {
-    display: inline;
-    
-}
-
-.avatar {
-    padding-right: 8px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--white);
-    border-radius: 50%;
-    vertical-align: bottom;
-}
-
-.name:hover, span:hover {
-    color: var(--cyan);
-    cursor: pointer;
-}
-
-.main-img:hover {
-    flood-color: var(--cyan);
-    cursor: pointer;
 }
